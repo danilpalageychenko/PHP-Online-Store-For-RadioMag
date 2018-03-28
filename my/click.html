@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+   <head> 
+      <meta charset="utf-8">
+      <title>Hello World!</title>
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+      <script type="text/javascript" src="//vk.com/js/api/openapi.js?139"></script>   
+      <style>
+         body {
+         overflow-x: hidden !important;
+         overflow-y: hidden !important;
+         }
+      </style>  
+   </head>
+   <!--<body> 
+      <div style="top: -8px; left: -8px;"id="vk_like"></div>     
+    <script type="text/javascript">
+         function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+         }
+         
+         VK.init({apiId: 5896883, onlyWidgets: true});
+         VK.Widgets.Like("vk_like", {type: "button"});     
+         
+         VK.Observer.subscribe('widgets.like.liked', function(likeCount) {
+            setCookie('clicked', 'yes', 123);
+         });        
+      </script>-->
+      
+      <script>
+      window.onload = (function() {
+      console.log("qwe");
+      
+          VK.init({
+                apiId: 5941239 //ВАШ_IP_ID
+              });
+          function authInfo(response) 
+          {
+            if (response.session)
+            {
+               var value = "";
+               for (var i in response.session.user)
+               {                                
+                  value += i + '' + ' = ' + response.session.user[i] + "<br />";            
+               }
+               document.getElementById('id').innerHTML = value;          
+            } 
+            else 
+            {
+              document.getElementById('id').innerHTML = 'Вы не авторизованы вконтакте.';
+            }
+          }
+          //VK.Auth.getLoginStatus(authInfo);
+          VK.Auth.login(authInfo);
+          
+
+      });
+      </script>
+      <div id='id'></div>
+        
+
+  
+   </body> 
+</html>
